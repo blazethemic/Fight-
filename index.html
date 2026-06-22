@@ -1,7 +1,33 @@
 Fight/
 
-index.html
-style.css *{
+index.html 
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+
+content="width=device-width,initial-scale=1">
+
+<title>
+
+West Palm Warriors
+
+</title>
+
+<link rel="stylesheet"
+
+href="style.css">
+
+</head>
+
+
+style.css
+  *{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -128,255 +154,7 @@ margin:10px;
 }
 
 /* CHARACTER SCREEN */
-const characters = [
 
-{
-
-id:0,
-
-name:"95 Rich",
-
-city:"West Palm Beach",
-
-health:100,
-
-power:95,
-
-speed:85,
-
-special:"Palm Beach Finisher",
-
-description:
-
-"Street champion"
-
-},
-
-{
-
-id:1,
-
-name:"Dragon Master",
-
-city:"Hong Kong",
-
-health:100,
-
-power:90,
-
-speed:100,
-
-special:"Dragon Strike",
-
-description:
-
-"Martial arts legend"
-
-},
-
-{
-
-id:2,
-
-name:"Moon Dancer",
-
-city:"Las Vegas",
-
-health:100,
-
-power:85,
-
-speed:100,
-
-special:"Moon Spin",
-
-description:
-
-"Dance fighter"
-
-},
-
-{
-
-id:3,
-
-name:"Titan X",
-
-city:"New York City",
-
-health:150,
-
-power:100,
-
-speed:70,
-
-special:"Titan Smash",
-
-description:
-
-"Super strength warrior"
-
-}
-
-];
-
-
-const characterGrid=
-
-document.getElementById(
-
-"characterGrid"
-
-);
-
-
-let selectedCharacter=0;
-
-
-function loadCharacters(){
-
-characterGrid.innerHTML="";
-
-
-characters.forEach(
-
-(character,index)=>{
-
-const card=
-
-document.createElement(
-
-"div"
-
-);
-
-
-card.className=
-
-"characterCard";
-
-
-card.innerHTML=`
-
-<h3>
-
-${character.name}
-
-</h3>
-
-<p>
-
-${character.city}
-
-</p>
-
-<p>
-
-Power:
-
-${character.power}
-
-</p>
-
-<p>
-
-Speed:
-
-${character.speed}
-
-</p>
-
-<p>
-
-Health:
-
-${character.health}
-
-</p>
-
-`;
-
-
-card.onclick=()=>{
-
-selectCharacter(
-
-index
-
-);
-
-};
-
-
-characterGrid.appendChild(
-
-card
-
-);
-
-});
-
-}
-
-
-function selectCharacter(
-
-index
-
-){
-
-selectedCharacter=
-
-index;
-
-
-document
-
-.querySelectorAll(
-
-".characterCard"
-
-)
-
-.forEach(
-
-card=>{
-
-card.classList.remove(
-
-"selected"
-
-);
-
-}
-
-);
-
-
-document
-
-.querySelectorAll(
-
-".characterCard"
-
-)
-
-[index]
-
-.classList.add(
-
-"selected"
-
-);
-
-}
-
-
-window.onload=()=>{
-
-loadCharacters();
-
-};
 #characterScreen{
 
 display:none;
@@ -660,7 +438,9 @@ color:gold;
 margin-bottom:25px;
 
 }
-game.js const canvas=
+
+game.js
+const canvas=
 
 document.getElementById(
 
@@ -1107,7 +887,8 @@ nextLevel();
 
 
 };
-characters.js const characters = [
+characters.js
+  const characters = [
 
 {
 
@@ -1356,7 +1137,9 @@ window.onload=()=>{
 loadCharacters();
 
 };
-cities.js const cities=[
+
+cities.js
+  const cities=[
 
 {
 
@@ -1443,7 +1226,9 @@ city.name;
 const canvas=
 
 document
-levels.js const levels=[
+
+levels.js
+  const levels=[
 
 {
 
@@ -1641,53 +1426,9 @@ document
 
 
 }
+
 ai.js
-effects.js let particles=[];
-
-
-/* CREATE PARTICLES */
-
-function createParticles(
-
-x,
-
-y,
-
-amount
-
-){
-
-for(
-
-let i=0;
-
-i<amount;
-
-i++
-
-){
-
-particles.push({
-
-x:x,
-
-y:y
-assets/
-Fight/
-
-index.html
-
-style.css
-
-game.js
-
-characters.js
-
-cities.js
-
-levels.js
-
-ai.js let enemy={
+  let enemy={
 
 x:850,
 
@@ -1951,8 +1692,39 @@ enemy.health+
 }
 
 effects.js
+  let particles=[];
 
-controls.js const player={
+
+/* CREATE PARTICLES */
+
+function createParticles(
+
+x,
+
+y,
+
+amount
+
+){
+
+for(
+
+let i=0;
+
+i<amount;
+
+i++
+
+){
+
+particles.push({
+
+x:x,
+
+y:y
+
+controls.js
+  const player={
 
 x:250,
 
@@ -2370,8 +2142,8 @@ player.health+
 
 }
 
-
-README.md # WEST PALM WARRIORS
+README.md 
+  # WEST PALM WARRIORS
 
 MOBILE FIGHTING GAME
 
@@ -2528,27 +2300,3 @@ https://yourusername.github.io/Fight/
 GAME COMPLETE
 
 VERSION 1.0
-<!DOCTYPE html>
-
-<html>
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-
-content="width=device-width,initial-scale=1">
-
-<title>
-
-West Palm Warriors
-
-</title>
-
-<link rel="stylesheet"
-
-href="style.css">
-
-</head>
-
